@@ -1,0 +1,14 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "title": "Lord of the Rings Fellowship of the Ring",
+            "Director": "Peter Jackson",
+            "releaseDate": 2001,
+            "genre": "Fantasy",
+            "rating": 8.8,
+            "duration": 178,
+            "Link": "https://www.imdb.com/title/tt0120737/"
+        }
+    ]
+}

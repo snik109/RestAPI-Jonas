@@ -1,8 +1,7 @@
 const { patch } = require("../routes/movieRoutes");
 
-let objects = [
-    { id: 1, title: 'Lord of the Rings Fellowship of the Ring', Director: 'Peter Jackson', releaseDate: 2001 },
-];
+const data = require('../data/databaseStorage.json');
+const objects = data.movies;
 
 // Get all objects
 const getAllObjects = () => {
@@ -65,6 +64,8 @@ const updateObjectById = (id, updatedObject) => {
     }
     return null;
 }
+
+
 
 
 module.exports = {

@@ -1,12 +1,5 @@
 const httpStatusCodes = require("./httpStatusCodes.json");
 
-/**
- * Auto-responder for ANY HTTP scenario.
- * Decides the best status code based on the provided parameters.
- * 
- * @param {object} res Express response object
- * @param {object} options Various flags/data to indicate the outcome
- */
 function respond(res, options = {}) {
     const {
         status,     // if you want to manually force a status code
@@ -50,7 +43,7 @@ function respond(res, options = {}) {
 /**
  * Internal sender that uses the status code map
  */
-function send(res, statusCode, data = null, error = null) {
+function send(res, statusCode, data, error) {
     const message = (`Status ${statusCode.toString()}: ${httpStatusCodes[statusCode]}`);
 
 
