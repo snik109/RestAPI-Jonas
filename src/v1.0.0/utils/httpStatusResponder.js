@@ -1,4 +1,4 @@
-const httpStatusCodes = require("./httpStatusCodes");
+const httpStatusCodes = require("./httpStatusCodes.json");
 
 /**
  * Auto-responder for ANY HTTP scenario.
@@ -48,10 +48,12 @@ function respond(res, options = {}) {
 }
 
 /**
- * Internal sender that uses your status code map
+ * Internal sender that uses the status code map
  */
 function send(res, statusCode, data = null, error = null) {
-    const message = httpStatusCodes[statusCode];
+    const message = (`Status ${statusCode.toString()}: ${httpStatusCodes[statusCode]}`);
+
+
 
     const payload = {
         status: statusCode,

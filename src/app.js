@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const movieRoutes = require('./v1/routes/movieRoutes');
+const movieRoutes = require('./v1.0.0/routes/movieRoutes');
 const cors = require('cors');
 
 //Middleswares
