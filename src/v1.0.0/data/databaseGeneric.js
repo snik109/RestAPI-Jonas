@@ -1,5 +1,3 @@
-const { patch } = require("../routes/movieRoutes");
-
 const data = require('../data/databaseStorage.json');
 const objects = data.movies;
 
