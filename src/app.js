@@ -8,7 +8,7 @@ const app = express();
 // Middleware
 app.use(express.json());
 app.use(cors());
-// Dynamically find and mount versioned routes
+// Function to find versioned routes and mount them
 findVersions(app);
 
 module.exports = app;

@@ -14,7 +14,8 @@ function respond(res, options = {}) {
         tooManyRequests,
         badRequest
     } = options;
-
+    console.log(options);
+    console.log(res);
     // 1. Highest priority: explicit status override
     if (status) {
         return send(res, status, data, error);

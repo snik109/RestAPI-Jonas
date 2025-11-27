@@ -1,3 +1,6 @@
+//* Find and mount versioned routes dynamically aka all root folders inside src that start with "v"
+// ignore all versions that are set to true in versionIgnore.json *//
+
 const fs = require('fs');
 const path = require('path');
 const versionIgnore = require('./versionIgnore.json');
@@ -17,6 +20,7 @@ const versions = fs.readdirSync(srcPath).filter(name => {
 versions.forEach(version => {
     try {
     const routesPath = path.join(srcPath, version, "routes");
+    // if version is in versionIgnore.json and set to true, skip it
     if (versionIgnore[version]) {
         console.log(`Skipping version ${version} as per versionIgnore.json`);
         return; // Skip this version
